@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mood Bloom Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 30px;
+            color: #424242;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #1b5e20;
+            background-color: #81c784;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2e7d32;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .chart-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .entries {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .entry {
+            padding: 15px 5px;
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        .entry:last-child {
+            border-bottom: none;
+        }
+
+        .mood {
+            font-weight: bold;
+            color: #388e3c;
+        }
+
+        #clock {
+            color: #1b5e20;
+            background-color: #c8e6c9;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        @media (max-width: 700px) {
+            .stats {
+                flex-direction: column;
+            }
+
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌱 Mood Bloom</h1>
+
+    <h2>Good morning 👋</h2>
+    <p>Your mood journey at a glance.</p>
+
+    <h4 id="clock"></h4>
+
+    <!-- Statistics -->
+    <div class="stats">
+
+        <div class="card">
+            <p>Average Mood</p>
+            <div class="number" id="averageMood">4.2</div>
+            <p>/ 5</p>
+        </div>
+
+        <div class="card">
+            <p>Total Entries</p>
+            <div class="number" id="totalEntries">12</div>
+        </div>
+
+        <div class="card">
+            <p>Current Mood</p>
+            <div class="number">😊</div>
+            <p class="mood">Happy</p>
+        </div>
+
+    </div>
+
+    <!-- Graph -->
+    <div class="chart-box">
+        <h2>Mood This Week</h2>
+
+        <canvas id="moodChart"></canvas>
+    </div>
+
+    <!-- Entries -->
+    <div class="entries">
+
+        <h2>Recent Entries</h2>
+
+        <div class="entry">
+            😊 <span class="mood">Aug 29 · Happy</span>
+            <p>Had a productive day and felt good.</p>
+        </div>
+
+        <div class="entry">
+            😐 <span class="mood">Aug 28 · Okay</span>
+            <p>Was a little tired but got my work done.</p>
+        </div>
+
+        <div class="entry">
+            😑 <span class="mood">Aug 27 · Better</span>
+            <p>Started feeling more positive today.</p>
+        </div>
+
+        <div class="entry">
+            😔 <span class="mood">Aug 26 · Low</span>
+            <p>Had a stressful day with lots of work.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // Clock
+    function showTime() {
+
+        let time = new Date();
+
+        document.getElementById("clock").innerHTML =
+            time.toLocaleTimeString();
+
+    }
+
+    showTime();
+
+    setInterval(showTime, 1000);
+
+
+    // Mood Graph
+    new Chart(document.getElementById("moodChart"), {
+
+        type: "line",
+
+        data: {
+
+            labels: [
+                "Aug 23",
+                "Aug 24",
+                "Aug 25",
+                "Aug 26",
+                "Aug 27",
+                "Aug 28",
+                "Aug 29"
+            ],
+
+            datasets: [{
+                label: "Mood",
+                data: [3, 4, 3, 2, 4, 4, 5],
+                borderWidth: 3,
+                tension: 0.4
+            }]
+
+        },
+
+        options: {
+
+            scales: {
+                y: {
+                    min: 1,
+                    max: 5,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+
+        } });
+
+</script>
+
+</body>
+</html>

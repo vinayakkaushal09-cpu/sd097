@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #1b5e20;
+            background-color: #81c784;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #2e7d32;
+        }
+
+        p {
+            color: #424242;
+        }
+
+        #clock {
+            color: #1b5e20;
+            background-color: #c8e6c9;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #a5d6a7;
+            margin: 20px 0;
+        }
+
+        strong {
+            color: #388e3c;
+        }
+
+        body > p,
+        body > h2,
+        body > h4 {
+            background-color: white;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>🌱 Activity</h1>
+
+    <textarea rows="1" cols="50"
+        placeholder="Your recent mood journey"></textarea>
+
+    <hr>
+
+    <h2>Today's Activity</h2>
+
+    <p>🤩 <strong>Excited</strong></p>
+
+    <textarea rows="1" cols="40"
+        placeholder="Feeling good today!"></textarea><br>
+
+    <h4 id="clock"></h4>
+
+
+    <script>
+
+        function showTime() {
+
+            let time = new Date();
+
+            document.getElementById("clock").innerHTML =
+                time.toLocaleTimeString();
+
+        }
+
+        showTime();
+
+        setInterval(showTime, 1000);
+
+    </script>
+
+
+    <hr>
+
+    <h2>Recent Entries</h2>
+
+    😊 Aug 28 &nbsp; Happy
+
+    <hr>
+
+    😐 Aug 27 &nbsp; Okay
+
+    <hr>
+
+    😑 Aug 26 &nbsp; Better
+
+    <hr>
+
+</body>
+
+</html>
+```

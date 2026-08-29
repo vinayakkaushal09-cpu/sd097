@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mood Check-in</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1b5e20;
+            background-color: #81c784;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #2e7d32;
+            text-align: center;
+        }
+
+        h3 {
+            color: #388e3c;
+        }
+
+        .mood {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #81c784;
+        }
+
+        .mood-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            background-color: #f1f8e9;
+            color: #2e7d32;
+            font-size: 18px;
+        }
+
+        .mood-option input {
+            width: 25px;
+            height: 25px;
+            accent-color: #4caf50;
+        }
+
+        textarea {
+            width: 95%;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid #81c784;
+            border-radius: 10px;
+            font-size: 15px;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #2e7d32;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2e7d32;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <title>mood</title>
+
+    <h1>🌱 MOOD 🌱</h1>
+
+    <h2>How are you feeling today?</h2>
+
+    <div class="mood">
+
+        <label class="mood-option">
+            <input type="radio" name="mood" value="Happy">
+            😄 Happy
+        </label>
+
+        <label class="mood-option">
+            <input type="radio" name="mood" value="Good">
+            🙂 Good
+        </label>
+
+        <label class="mood-option">
+            <input type="radio" name="mood" value="Okay">
+            😐 Okay
+        </label>
+
+        <label class="mood-option">
+            <input type="radio" name="mood" value="Sad">
+            😔 Sad
+        </label>
+
+        <label class="mood-option">
+            <input type="radio" name="mood" value="Angry">
+            😠 Angry
+        </label>
+
+    </div>
+
+    <h3>Add a note</h3>
+
+    <textarea placeholder="Write something..."></textarea>
+
+    <br><br>
+
+    <button>Save Mood</button>
+
+</body>
+
+</html>

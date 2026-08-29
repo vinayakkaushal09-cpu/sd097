@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌱 MoodBloom 🌱</title>
+    
+
+    <style>
+
+        /* Whole page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #81c784;
+            padding: 20px;
+            border-bottom: 5px solid #388e3c;
+        }
+
+        /* Title */
+        .intro h1 {
+            color: #1b5e20;
+            margin: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px;
+        }
+
+        /* Buttons */
+        nav button {
+            background-color: #ffffff;
+            color: #2e7d32;
+            border: 2px solid #2e7d32;
+            border-radius: 10px;
+            padding: 10px 18px;
+            margin: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* Button hover */
+        nav button:hover {
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        /* Dashboard */
+        #dashboard {
+            background-color: #ffffff;
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid #81c784;
+            box-shadow: 0 4px 10px #bdbdbd;
+        }
+
+        /* Dashboard heading */
+        #dashboard h1 {
+            color: #2e7d32;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="intro">
+            <H1>🌱 MoodBloom 🌱</H1>
+        </div>
+
+        <nav>
+            <a href="DASHBOARD.HTML"><button onclick="showpage('dashboard')">Dashboard</button></a>
+
+           <a href="mood.html"> <button onclick="showpage('mood')">Mood</button></a>
+           <a href="activity.html"> <button onclick="showpage('activity')">Activity</button><br></a>
+
+           <a href="theme.html"><button onclick="showpage('theme')">Theme</button></a> 
+            <a href="setting.html"><button onclick="showpage('setting')">Setting</button></a>
+        </nav>
+        <br>
+        <img src="logo.png"  length="100" width="200">
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* Heading */
+
+        h1 {
+            text-align: center;
+            color: #1b5e20;
+            background-color: #81c784;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        /* Section Headings */
+
+        h2 {
+            color: #2e7d32;
+            margin-top: 25px;
+        }
+
+        /* Settings Boxes */
+
+        div {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #81c784;
+            box-shadow: 0 4px 10px #c8c8c8;
+        }
+
+        /* Text Boxes */
+
+        textarea {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 2px solid #a5d6a7;
+            border-radius: 10px;
+            font-size: 15px;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #2e7d32;
+        }
+
+        /* Paragraph */
+
+        p {
+            color: #424242;
+            font-size: 16px;
+        }
+
+        /* Buttons */
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Button Hover */
+
+        button:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Lines */
+
+        hr {
+            border: 0;
+            border-top: 2px solid #a5d6a7;
+            margin: 25px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Heading -->
+
+    <h1>⚙️ Settings</h1>
+
+    <hr>
+
+
+    <!-- Profile -->
+
+    <h2>👤 Profile</h2>
+
+    <div>
+
+        <textarea rows="1" cols="40"
+        placeholder="Your name"></textarea>
+
+        <textarea rows="1" cols="40"
+        placeholder="email id"></textarea>
+        <textarea rows="1" cols="40"
+        placeholder="Emergency contact"></textarea>
+        <button>Edit Profile</button>
+    </div>
+
+    <hr>
+
+    <!-- Notifications -->
+    <h2>🔔 Notifications</h2>
+    <div>
+        <p>Daily Mood Reminder</p>
+        <button>ON</button>
+    </div>
+    <hr>
+
+    <!-- Data -->
+    <h2>💾 Data</h2>
+    <div>
+        <p>Clear All Journal Data</p>
+        <button>Clear Data</button>
+    </div>
+    <hr>
+
+    <!-- About -->
+    <h2>ℹ️ About</h2>
+    <div>
+        <p>Version 1.0</p>
+        <p>
+            A simple app to track your daily mood and journal.
+        </p>
+        <button>Send Feedback</button>
+    </div>
+</body>
+</html>
